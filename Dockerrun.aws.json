@@ -1,0 +1,32 @@
+{
+  "AWSEBDockerrunVersion": "1",
+  "containerDefinitions": [
+    {
+      "name": "react-appc",
+      "image": "atchayara/reactapp",
+      "essential": true,
+      "memory": 128,
+      "portMappings": [
+        {
+          "hostPort": 80,
+          "containerPort": 80
+        }
+      ],
+      "environment": [
+        {
+          "name": "NODE_ENV",
+          "value": "production"
+        }
+      ],
+      "ports": [
+        {
+          "containerPort": 80
+        }
+      ]
+    }
+  ],
+  "family": "",
+  "volumes": [],
+  "networkMode": "bridge"
+}
+
